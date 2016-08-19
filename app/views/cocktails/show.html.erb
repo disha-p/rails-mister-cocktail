@@ -1,8 +1,13 @@
+<% if @cocktail.photo? %>
+  <% photo = @cocktail.photo.url(:standard) %>
+<% else %>
+  <% photo = "https://unsplash.it/150/150" %>
+<% end %>
 
-
-<div class="banner" style="background-image: url('https://source.unsplash.com/category/food/1000x800')">
+<div class="banner" style="background-image: url(<%= image_path  photo %>)">
   <div class="banner-content">
     <h1><%= @cocktail.name %></h1>
+    <%= link_to "delete", cocktail_path, method: :delete, class: "btn btn-danger" %>
     <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), {class: "btn-btn-danger btn-lg"} %>
     <ul>
       <% @cocktail.doses.each do |dose| %>

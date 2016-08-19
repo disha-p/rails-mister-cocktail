@@ -31,7 +31,12 @@ gem 'turbolinks', '~> 5'
 # gem 'capistrano-rails', group: :development
 gem 'pg'
 gem 'rails-controller-testing'
+
+# to create picture uploader
+
 gem 'figaro'
+gem 'cloudinary', '1.1.0'
+gem 'carrierwave'
 
 
 # Front-end

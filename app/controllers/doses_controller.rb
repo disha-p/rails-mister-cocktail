@@ -1,5 +1,6 @@
 class DosesController < ApplicationController
   before_action :find_cocktail, only: [:new, :create]
+  mount_uploader :photo, PhotoUploader
 
   def new
     @dose = Dose.new
