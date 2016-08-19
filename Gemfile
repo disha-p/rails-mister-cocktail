@@ -31,6 +31,7 @@ gem 'turbolinks', '~> 5'
 # gem 'capistrano-rails', group: :development
 gem 'pg'
 gem 'rails-controller-testing'
+gem 'figaro'
 
 
 # Front-end
